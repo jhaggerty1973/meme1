@@ -1,5 +1,5 @@
 streamlit
 pandas
 requests
-snscrape>=0.4.3.20230110
+snscrape
 vaderSentiment
