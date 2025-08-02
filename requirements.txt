@@ -3,3 +3,5 @@ pandas
 requests
 snscrape
 vaderSentiment
+yfinance
+scikit-learn
