@@ -22,7 +22,10 @@ scored_posts = analyze_sentiment(all_posts)
 summary_df = extract_and_aggregate(scored_posts)
 
 # Step 4: Filter and display
-price_filter = st.slider("Max Stock Price", 1, 200, 50)
-filtered = summary_df[summary_df["Current Price"] <= price_filter]
-st.subheader("📈 Top Meme Stock Candidates")
-st.dataframe(filtered.sort_values("Total Mentions", ascending=False).reset_index(drop=True))
+if not summary_df.empty and "Current Price" in summary_df.columns:
+    price_filter = st.slider("Max Stock Price", 1, 200, 50)
+    filtered = summary_df[summary_df["Current Price"] <= price_filter]
+    st.subheader("📈 Top Meme Stock Candidates")
+    st.dataframe(filtered.sort_values("Total Mentions", ascending=False).reset_index(drop=True))
+else:
+    st.warning("No valid ticker mentions found in Reddit or Twitter posts.")

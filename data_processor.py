@@ -31,4 +31,8 @@ def extract_and_aggregate(posts):
             "Current Price": price,
             "Signal": signal
         })
-    return pd.DataFrame(rows)
+
+    if rows:
+        return pd.DataFrame(rows, columns=["Ticker", "Total Mentions", "Avg Sentiment", "Current Price", "Signal"])
+    else:
+        return pd.DataFrame(columns=["Ticker", "Total Mentions", "Avg Sentiment", "Current Price", "Signal"])
