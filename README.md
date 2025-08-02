@@ -1,21 +1,17 @@
-# Meme Stock Swing Predictor v2 (Beta)
-
-This version integrates Reddit + Twitter sentiment and mention volume to identify trending meme stocks.
+# Meme Stock Swing Predictor v3 (Live)
 
 ## Features
-- Filters stocks by real-time buzz (Reddit and Twitter)
-- Ranks top meme stocks by total mentions and sentiment
-- Optional price filter for swing trading under $X
+- ✅ Live scraping from Reddit (r/WallStreetBets)
+- ✅ Live scraping from Twitter using snscrape
+- ✅ Sentiment analysis using VADER
+- ✅ Aggregation and filtering by stock symbol
 
-## Coming Soon
-- Real-time scraping from Reddit and Twitter
-- Sentiment NLP using VADER or FinBERT
-- News and SEC filing parsing
-- ML model for swing trade prediction
-
-## To Run
-
-```bash
+## Setup
+```
 pip install -r requirements.txt
 streamlit run app.py
 ```
+
+## Notes
+- Twitter scraping uses snscrape (no API key required)
+- Reddit uses pushshift.io (public access)
