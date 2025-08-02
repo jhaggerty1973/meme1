@@ -1,25 +1,21 @@
-# Meme Stock Swing Predictor (Beta)
+# Meme Stock Swing Predictor v2 (Beta)
 
-This app scans social media and financial sources to find trending "meme stocks" and suggests possible swing trade opportunities.
+This version integrates Reddit + Twitter sentiment and mention volume to identify trending meme stocks.
 
-## Features (Planned for Full Release)
-- Reddit & Twitter sentiment analysis
-- News, press release & SEC filing parsing
-- Meme stock pattern matching
-- Machine learning prediction engine
-- Price filtering and alert system
+## Features
+- Filters stocks by real-time buzz (Reddit and Twitter)
+- Ranks top meme stocks by total mentions and sentiment
+- Optional price filter for swing trading under $X
 
-## Running the App
+## Coming Soon
+- Real-time scraping from Reddit and Twitter
+- Sentiment NLP using VADER or FinBERT
+- News and SEC filing parsing
+- ML model for swing trade prediction
 
-1. Install dependencies:
-```
+## To Run
+
+```bash
 pip install -r requirements.txt
-```
-
-2. Launch Streamlit app:
-```
 streamlit run app.py
 ```
-
-## Status
-🚧 Currently in **beta**: static data with UI functionality. Full pipeline in development.
